@@ -1,4 +1,6 @@
-# User Authentication API(server)
+# User Authentication Application
+
+# Backend
 
 A robust Node.js authentication service built with NestJS, MongoDB, Passport and JWT.
 
@@ -14,7 +16,6 @@ A robust Node.js authentication service built with NestJS, MongoDB, Passport and
 - Winston logger integration
 - Swagger for API documentation.
 
-
 ## Installation
 
 ```bash
@@ -28,6 +29,7 @@ Create the `.env` file in the root directory with the required variables
 ## Running the Application
 
 Development mode:
+
 ```bash
 npm run start:dev
 ```
@@ -35,12 +37,13 @@ npm run start:dev
 ## API Endpoints
 
 ### Authentication
+
 - POST `/auth/register` - Register new user
 - POST `/auth/login` - Login user
 
 ### Users
-- GET `/users/profile` - Get user profile (Protected)
 
+- GET `/users/profile` - Get user profile (Protected)
 
 ## Request Headers
 
@@ -56,9 +59,7 @@ npm run start:dev
 - Error handling and logging
 - API rate limiting
 
-
-
-# User Authentication App(client)
+# Frontend
 
 A modern React application with authentication features built using TypeScript, Vite, and Tailwind CSS.
 
@@ -75,6 +76,7 @@ A modern React application with authentication features built using TypeScript, 
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
@@ -82,6 +84,7 @@ npm install
 2. Create the `.env` file in the root directory with the required variables
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -104,4 +107,3 @@ src/
 - Tailwind CSS
 - React Router
 - Axios
-
