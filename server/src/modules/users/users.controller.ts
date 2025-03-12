@@ -1,7 +1,6 @@
 import { Controller, Get, UseGuards, Req } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { JwtAuthGuard } from 'src/guards/jwt.guard';
-import { ApiKeyGuard } from 'src/guards/api-key.guard';
 import { Constants } from 'src/helpers/Constants';
 import { ApiTags } from '@nestjs/swagger';
 
@@ -11,7 +10,7 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Get('profile')
-  @UseGuards(ApiKeyGuard, JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   async getProfile(@Req() req: any) {
     return this.usersService.getProfile(req.user.id);
   }
