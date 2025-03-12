@@ -21,7 +21,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
       code: status,
       isError: true,
       status: 'Failure',
-      message: message.message[0],
+      message: Array.isArray(message.message)
+        ? message.message[0]
+        : message.message,
       data: null,
     });
   }
